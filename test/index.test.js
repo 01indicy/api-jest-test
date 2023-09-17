@@ -1,7 +1,6 @@
 const request = require('supertest')
 const express = require('express');
 const app = require('../app');
-const closeServer = () => { server.close(); };
 
 describe('default get request', () => {
     let server;
@@ -19,6 +18,6 @@ describe('default get request', () => {
         expect(response.statusCode).toBe(200)
     });
     afterAll(() => {
-        closeServer();
+        server.close();
     });
 });
