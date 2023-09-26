@@ -1,5 +1,4 @@
 const request = require('supertest')
-const express = require('express');
 const app = require('../app');
 
 describe('default get request', () => {
@@ -17,6 +16,7 @@ describe('default get request', () => {
         const response = await request(app).get('/get-data')
         expect(response.statusCode).toBe(200)
     });
+
     afterAll(() => {
         server.close();
     });
