@@ -9,7 +9,7 @@ describe('default get request', () => {
 
     it('should return a message', async () => {
         const response = await request(app).get('/')
-        expect(response.statusCode).toBe(201)
+        expect(response.statusCode).toBe(200)
     });
 
     it('should return a json data', async () => {
